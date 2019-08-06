@@ -17,15 +17,15 @@ from sklearn.svm import SVC
 
 
 # Load dataset
-url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
-names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
+url = "./frequence_data_set_norm.cvs"
+names = ['time-slot','availability']
 dataset = pandas.read_csv(url, names=names)
 
 
 # Split-out validation dataset
 array = dataset.values
-inputFeatures = array[:,0:4]
-expectedResult = array[:,4]
+inputFeatures = array[:,0:1]
+expectedResult = array[:,1]
 
 print(inputFeatures)
 print()
@@ -63,18 +63,18 @@ for name, model in models:
 
 
 # Compare Algorithms
-# fig = plt.figure()
-# fig.suptitle('Algorithm Comparison')
-# ax = fig.add_subplot(111)
-# plt.boxplot(results)
-# ax.set_xticklabels(names)
-# plt.show()
+fig = plt.figure()
+fig.suptitle('Algorithm Comparison')
+ax = fig.add_subplot(111)
+plt.boxplot(results)
+ax.set_xticklabels(names)
+plt.show()
 
 
 # Make predictions on validation dataset
-# knn = KNeighborsClassifier()
-# knn.fit(X_train, Y_train)
-# predictions = knn.predict(X_validation)
-# print(accuracy_score(Y_validation, predictions))
-# print(confusion_matrix(Y_validation, predictions))
-# print(classification_report(Y_validation, predictions))
+knn = KNeighborsClassifier()
+knn.fit(X_train, Y_train)
+predictions = knn.predict(X_validation)
+print(accuracy_score(Y_validation, predictions))
+print(confusion_matrix(Y_validation, predictions))
+print(classification_report(Y_validation, predictions))
