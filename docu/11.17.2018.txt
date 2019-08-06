@@ -1,0 +1,41 @@
+
+
+Parametrii de intrare (features): 
+
+1. Sarcian_motorului 
+2. Turatia
+2. deltaP
+
+
+Parametri prezisi (output):
+
+A. PE (putere)
+B. CS ( consum specific)
+C. tge
+D. pk (persiune- back-presure)
+E. fum 
+
+
+
+Normalizare: 
+
+Sarcina:
+
+100% 90% 70% 58% 48% 30%
+
+1; 0,9;   0,7;  0,58; 0,48; 0,3 [1 - 0,1]
+
+Turatia
+
+1000 1200 1400 1600 1800 2000 2200
+
+10; 12; 14; 16; 18; 20; 22 [10 - 100]
+
+delta P
+
+- valori absolute
+
+
+Next step:
+
+Create an excel with the normalizated train data
